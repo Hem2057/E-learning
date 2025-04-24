@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>elearn - Home</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/fix-layout.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>E~Learn</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+      </ul>
+      <div class="auth-buttons">
+        <button class="btn login-btn">Login</button>
+        <button class="btn signup-btn">Sign Up</button>
+        <button id="dark-mode-toggle" class="btn dark-mode-btn" aria-label="Toggle Dark Mode">🌙</button>
+      </div>
+      <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Banner Section -->
+    <section class="Banner-content article" data-bgcolor="#1e3a8a">
+      <div class="list">
+        <div class="item">
+          <img src="assets/Images/banner.png" alt="Learning Banner" />
+          <div class="banner-slider">
+            <div class="title">E-LEARNING EVOLVED</div>
+            <div class="slogon">Empower Your Future</div>
+            <div class="banner-content">
+              Explore a world of knowledge across technology, business, design, and more. Learn at your own pace, from top industry experts.
+            </div>
+            <button class="view-more">Start Learning &#8599;</button>
+          </div>
+          <div class="detail">
+            <div class="title">Learn With Confidence</div>
+            <div class="banner-content">
+              From beginner tutorials to advanced certifications, our platform provides the skills and support you need to thrive in today’s digital world.
+            </div>
+            <div class="banner-btn">
+              <button>Browse Courses</button>
+              <button class="view-button" id="view-Button">See Curriculum</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slideBtn">
+        <button id="prev"><i class="fa-solid fa-arrow-left-long"></i></button>
+        <button id="next"><i class="fa-solid fa-arrow-right-long"></i></button>
+        <button id="back"><i class="fa-solid fa-arrow-left-long"></i></button>
+      </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <h2>Learn Anytime, Anywhere</h2>
+      <p>Your journey to mastering new skills starts here.</p>
+      <div class="hero-cta">
+        <button class="btn explore-btn">Explore Courses</button>
+        <button class="btn signup-btn">Sign Up Now</button>
+      </div>
+    </section>
+
+    <!-- Course Categories -->
+    <section class="course-categories">
+      <h3>Course Categories</h3>
+      <div class="category-cards">
+        <div class="category-card">Programming</div>
+        <div class="category-card">Business</div>
+        <div class="category-card">Design</div>
+        <div class="category-card">Languages</div>
+        <div class="category-card">Personal Development</div>
+      </div>
+    </section>
+
+    <!-- Featured Courses -->
+    <section class="courses-preview">
+      <h3>Featured Courses</h3>
+      <div class="course-cards">
+        <div class="card">
+          <div class="top-rated-badge">Top Rated</div>
+          <img src="assets/Images/js.jpg" alt="Intro to JavaScript" />
+          <h4>Intro to JavaScript</h4>
+          <p>Learn the basics of JavaScript programming.</p>
+          <div class="progress-bar">
+            <div class="progress" style="width: 70%;"></div>
+          </div>
+          <div class="rating">★★★★☆</div>
+          <button onclick="startCourse('Intro to JavaScript')">Start Course</button>
+          <button class="rate-btn" onclick="rateCourse('Intro to JavaScript')">Rate this course</button>
+        </div>
+        <div class="card">
+          <img src="assets/Images/Digital_m.jpeg" alt="Digital Marketing Basics" />
+          <h4>Digital Marketing Basics</h4>
+          <p>Understand the fundamentals of digital marketing.</p>
+          <div class="progress-bar">
+            <div class="progress" style="width: 45%;"></div>
+          </div>
+          <div class="rating">★★★★☆</div>
+          <button onclick="startCourse('Digital Marketing Basics')">Start Course</button>
+          <button class="rate-btn" onclick="rateCourse('Digital Marketing Basics')">Rate this course</button>
+        </div>
+        <div class="card">
+          <div class="top-rated-badge">Top Rated</div>
+          <img src="assets/Images/web.jpg" alt="HTML & CSS Fundamentals" />
+          <h4>HTML & CSS Fundamentals</h4>
+          <p>Build beautiful and responsive websites.</p>
+          <div class="progress-bar">
+            <div class="progress" style="width: 90%;"></div>
+          </div>
+          <div class="rating">★★★★★</div>
+          <button onclick="startCourse('HTML & CSS Fundamentals')">Start Course</button>
+          <button class="rate-btn" onclick="rateCourse('HTML & CSS Fundamentals')">Rate this course</button>
+        </div>
+        <div class="card">
+          <img src="assets/Images/ds.jpg" alt="Python Data Science" />
+          <h4>Python Data Science</h4>
+          <p>Master data analysis and visualization with Python.</p>
+          <div class="progress-bar">
+            <div class="progress" style="width: 30%;"></div>
+          </div>
+          <div class="rating">★★★★☆</div>
+          <button onclick="startCourse('Python Data Science')">Start Course</button>
+          <button class="rate-btn" onclick="rateCourse('Python Data Science')">Rate this course</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+      <h3>How It Works</h3>
+      <ol>
+        <li>Browse Courses</li>
+        <li>Enroll in Your Favorite Course</li>
+        <li>Learn at Your Own Pace</li>
+        <li>Get Certified</li>
+      </ol>
+      <p>Learn at your pace with expert instructors and certification upon completion.</p>
+    </section>
+
+    <!-- Student Testimonials -->
+    <section class="testimonials">
+      <h3>What Our Students Say</h3>
+      <div class="testimonial-cards">
+        <div class="testimonial-card">
+          <p>"elearn helped me land my dream job. The courses are top-notch!"</p>
+          <span>- Alex P.</span>
+        </div>
+        <div class="testimonial-card">
+          <p>"The instructors are knowledgeable and the platform is easy to use."</p>
+          <span>- Maria S.</span>
+        </div>
+        <div class="testimonial-card">
+          <p>"I loved the flexibility and the certification boosted my career."</p>
+          <span>- John D.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us -->
+    <section class="about-us">
+      <h3>About elearn</h3>
+      <p>elearn is dedicated to empowering learners worldwide by providing accessible, high-quality online education. Our mission is to help you achieve your goals and unlock your potential.</p>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="strong-cta">
+      <h3>Ready to Start Learning?</h3>
+      <button class="btn signup-btn">Join Now</button>
+      <button class="btn explore-btn">Get Started Free</button>
+    </section>
+
+    <!-- Recommended for You -->
+    <section class="recommended-courses">
+      <h3>Recommended for You</h3>
+      <div class="course-cards">
+        <div class="card">
+          <img src="assets/Images/py.png" alt="Python for Beginners" />
+          <h4>Python for Beginners</h4>
+          <p>Start your programming journey with Python.</p>
+          <div class="rating">★★★★☆</div>
+          <button onclick="startCourse('Python for Beginners')">Start Course</button>
+          <button class="rate-btn" onclick="rateCourse('Python for Beginners')">Rate this course</button>
+        </div>
+        <div class="card">
+          <img src="assets/Images/ux.jpg" alt="UX Design Basics" />
+          <h4>UX Design Basics</h4>
+          <p>Learn the fundamentals of user experience design.</p>
+          <div class="rating">★★★★☆</div>
+          <button onclick="startCourse('UX Design Basics')">Start Course</button>
+          <button class="rate-btn" onclick="rateCourse('UX Design Basics')">Rate this course</button>
+        </div>
+        <div class="card">
+          <img src="assets/Images/db.jpeg" alt="Database for Beginners" />
+          <h4>Database for Beginners</h4>
+          <p>Learn Complete Database from basic</p>
+          <div class="rating">★★★☆☆</div>
+          <button onclick="startCourse('Database for Beginners')">Start Course</button>
+          <button class="rate-btn" onclick="rateCourse('Database for Beginners')">Rate this course</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Meet Our Instructors -->
+  <section class="instructors">
+    <h3>Meet Our Instructors</h3>
+    <div class="instructor-cards">
+      <div class="instructor-card">
+        <img src="assets/Images/In1.jpg" alt="Instructor 1" />
+        <h4>Jane Doe</h4>
+        <p>Expert in Web Development with 10+ years of experience.</p>
+      </div>
+      <div class="instructor-card">
+        <img src="assets/Images/in2.jpg" alt="Instructor 2" />
+        <h4>John Smith</h4>
+        <p>Marketing Guru and Digital Strategy Specialist.</p>
+      </div>
+      <div class="instructor-card">
+        <img src="assets/Images/in3.jpg" alt="Instructor 3" />
+        <h4>Emily Johnson</h4>
+        <p>Certified UX Designer and Creative Thinker.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-group">
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="courses.html">Courses</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-links">
+        <h4>Support</h4>
+        <a href="faq.html">FAQ</a>
+        <a href="terms.html">Terms</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+      <div class="footer-links">
+        <h4>Connect</h4>
+        <a href="#" aria-label="Facebook"><img src="assets/Images/facebook-icon.png" alt="Facebook" /></a>
+        <a href="#" aria-label="Twitter"><img src="assets/Images/twitter-icon.png" alt="Twitter" /></a>
+        <a href="#" aria-label="Instagram"><img src="assets/Images/instagram-icon.png" alt="Instagram" /></a>
+      </div>
+    </div>
+    <p>|E~Learn|</p>
+  </footer>
+
+  <!-- Login Modal -->
+  <div id="login-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="login-close">&times;</span>
+      <h2>Login</h2>
+      <form id="login-form">
+        <label for="login-email">Email:</label>
+        <input type="email" id="login-email" name="login-email" required />
+        <label for="login-password">Password:</label>
+        <input type="password" id="login-password" name="login-password" required />
+        <button type="submit" class="btn">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Signup Modal -->
+  <div id="signup-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="signup-close">&times;</span>
+      <h2>Sign Up</h2>
+      <form id="signup-form">
+        <label for="signup-name">Name:</label>
+        <input type="text" id="signup-name" name="signup-name" required />
+        <label for="signup-email">Email:</label>
+        <input type="email" id="signup-email" name="signup-email" required />
+        <label for="signup-password">Password:</label>
+        <input type="password" id="signup-password" name="signup-password" required />
+        <button type="submit" class="btn">Sign Up</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
